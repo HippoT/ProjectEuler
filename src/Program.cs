@@ -9,8 +9,13 @@ namespace ProjectEuler
     {
         static void Main(string[] args)
         {
-            IProblem problem = new Problem3(600851475143);
+            DateTime now = DateTime.Now;
+            
+            IProblem problem = new Problem4(3);
             problem.Run();
+
+            var time = DateTime.Now.Subtract(now);
+             Console.WriteLine($"{time.TotalSeconds}");
         }
     }
 }
